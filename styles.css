@@ -1,0 +1,267 @@
+/* styles.css */
+
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background */
+    padding-top: 72px;
+}
+
+
+/* Header and Nav Styling */
+header {
+    background-color: #F1F3FB;
+    box-shadow: 0px 4px 2px -2px gray;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16rem 0 0;
+    z-index: 2;
+}
+
+/* Navigation List Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* Name link styling (excluded from scrolling logic) */
+.site-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    margin-right: 170px; /* Adds spacing after the name */
+}
+
+/* Hover state for navigation links */
+.site-name:hover {
+    color: darkblue; /* Optional hover color */
+}
+
+/* Styling for navigation links */
+.nav-link {
+    color: gray; /* Default color for links */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+/* Highlight active link */
+.nav-link.active {
+    color: blue; /* Highlighted color for the active link */
+    font-weight: bold;
+}
+
+.special-link {
+    text-decoration: none; /* Removes the underline */
+    color: gray; /* Inherits the color of the parent element */
+}
+
+.special-link:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+    color: inherit; /* Keeps the same color on hover */
+}
+
+.pdf-link {
+    text-decoration: none; /* Removes underline */
+    color: gray; /* A subtle blue color */
+}
+
+.pdf-link:hover {
+    text-decoration: none; /* Adds underline on hover */
+    color: inherit; /* Darker blue on hover */
+}
+
+/* Profile container ensures the image+links and bio are side by side */
+.profile-container {
+    display: flex; /* Horizontal layout */
+    flex-direction: row; /* Arrange items side by side */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 10rem; /* Adjust space from navbar */
+    padding: 0 7rem 0 0; /* Add padding to the sides */
+    margin-bottom: 10rem; /* Adjust space from navbar */
+    justify-content:center;
+}
+
+
+/* Group image and social links */
+.image-links-container {
+    display: flex;
+    flex-direction: column; /* Stack the image and social links vertically */
+    align-items: center; /* Center-align the content */
+    margin-right: 20px; /* Space between image-links group and biography */
+}
+
+/* Image styling */
+.profile-image {
+    width: 270px;
+    height: 270px;
+    border-radius: 15px; /* Slight rounding of corners */
+    object-fit: cover; /* Ensures the image scales properly */
+    margin-bottom: 15px; /* Space between image and social links */
+}
+
+/* Social links styling */
+.social-links {
+    display: flex;
+    flex-direction: row; /* Stack icons vertically */
+    gap: 10px; /* Space between icons */
+}
+
+.social-links a {
+    font-size: 2rem; /* Increase icon size */
+    color: #4682B4; /* Light green color */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-links a:hover {
+    color: #4169E1; /* Slightly darker green on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Biography note styling */
+.biography-note {
+    max-width: 600px; /* Restrict the width of the biography text */
+    font-family: Arial, sans-serif;
+    color: #333; /* Neutral text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.biography-note h2 {
+    font-size: 2rem; /* Size of the name heading */
+    margin-bottom: 15px; /* Spacing between the name and the paragraph */
+}
+
+.biography-note p {
+    text-align: justify; /* Justifies text to align both left and right */
+    font-size: 1rem; /* Standard text size for the bio */
+    margin: 0 0 0 3rem; /* Ensure no extra margin around the paragraph */
+}
+
+
+/* Ensure default link styles for biography links */
+.biography-note a {
+    color: #0073e6; /* Default link color */
+    text-decoration: none; /* No underline */
+    cursor: pointer;
+}
+
+.biography-note a:hover {
+    color: #005bb5; /* Darker blue on hover */
+}
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header content vertically */
+        height: auto; /* Adjust height for stacked content */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        align-items: center; /* Center all header content */
+        justify-content: center;
+        width: 100%;
+        border: 1px solid green
+    }
+    .site-name {
+        font-size: 1.0rem; /* Adjust size for readability */
+        white-space: nowrap; /* Prevent wrapping of the site name */
+        margin-bottom: 0.5rem; /* Add spacing between name and navigation links */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px; /* Reduce spacing between links */
+        align-items: center; /* Center align navigation links */
+    }
+    nav ul li:first-child {
+        margin-right: 0; /* Remove extra spacing on smaller screens */
+    }
+    nav ul li a {
+        font-size: 1.2rem; /* Adjust link size for readability */
+    }
+
+    .profile-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack image-links and biography vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        padding: 0 1rem; /* Reduce padding for mobile */
+        margin-top: 10rem; /* Adjust margin for mobile screens */
+        margin-bottom: 5rem; /* Adjust bottom margin for mobile */
+    }
+
+    .image-links-container {
+        margin-right: 0; /* Remove spacing on the right */
+        margin-bottom: 20px; /* Add space below the image-links section */
+        text-align: center; /* Center-align the image-links content */
+    }
+
+    .profile-image {
+        width: 200px; /* Resize image for smaller screens */
+        height: 200px; /* Keep proportional height */
+    }
+
+    .social-links {
+        flex-direction: row; /* Icons remain in a row */
+        justify-content: center; /* Center-align the social links */
+        gap: 15px; /* Adjust spacing between icons for mobile */
+    }
+
+    .biography-note {
+        display: flex; /* Use flexbox for internal centering */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        justify-content: center; /* Center vertically within its container */
+        align-items: center; /* Center horizontally */
+        margin: 0 auto; /* Center the entire biography horizontally */
+        max-width: 90%; /* Allow text to shrink for smaller screens */
+        text-align: center; /* Center-align the text */
+    }
+
+    .biography-note h2 {
+        font-size: 1.8rem; /* Slightly smaller header */
+        margin-bottom: 1rem; /* Adjust spacing below the header */
+    }
+
+    .biography-note p {
+        font-size: 0.9rem; /* Slightly smaller text for readability on mobile */
+        margin: 0; /* Remove extra margins */
+    }
+
+
+
+
+
+
+
+
