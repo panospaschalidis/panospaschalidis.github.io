@@ -50,11 +50,11 @@ nav ul li {
 
 /* Name link styling (excluded from scrolling logic) */
 .site-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
+    font-size: 2rem;
+    font-weight: nonebold;
+    color:#4682B4;
     text-decoration: none;
-    margin-right: 170px; /* Adds spacing after the name */
+    margin-right: -290px; /* Adds spacing after the name */
 }
 
 /* Hover state for navigation links */
@@ -97,11 +97,22 @@ nav ul li {
 }
 
 /* Profile container ensures the image+links and bio are side by side */
-.profile-container {
+.profile-vertical-container {
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 4rem; /* Adjust space from navbar */
+    padding: 0 1rem; /* Adjust padding for vertical layout */
+    margin-bottom: 4rem; /* Adjust space from bottom */
+    justify-content: center; /* Optional: center items vertically if needed */
+    gap: 0rem; /* Add space between items */
+}
+
+.profile-horizontal-container {
     display: flex; /* Horizontal layout */
     flex-direction: row; /* Arrange items side by side */
     align-items: flex-start; /* Align items to the top */
-    margin-top: 10rem; /* Adjust space from navbar */
+    margin-top: 2rem; /* Adjust space from navbar */
     padding: 0 7rem 0 0; /* Add padding to the sides */
     margin-bottom: 10rem; /* Adjust space from navbar */
     justify-content:center;
@@ -189,15 +200,6 @@ nav ul li {
         width: 100%;
         border: 1px solid green
     }
-    .site-name {
-        font-size: 1.0rem; /* Adjust size for readability */
-        white-space: nowrap; /* Prevent wrapping of the site name */
-        margin-bottom: 0.5rem; /* Add spacing between name and navigation links */
-        text-align: center;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
     nav ul {
         display: flex;
         flex-direction: column; /* Stack navigation links */
@@ -211,13 +213,24 @@ nav ul li {
         font-size: 1.2rem; /* Adjust link size for readability */
     }
 
-    .profile-container {
+    .profile-vertical-container {
+        display: flex; /* Flex layout */
+        flex-direction: column; /* Arrange items vertically */
+        align-items: center; /* Center items horizontally */
+        margin-top: 4rem; /* Adjust space from navbar */
+        padding: 0 1rem; /* Adjust padding for vertical layout */
+        margin-bottom: 4rem; /* Adjust space from bottom */
+        justify-content: center; /* Optional: center items vertically if needed */
+        gap: 0rem; /* Add space between items */
+    }
+    
+    .profile-horizontal-container {
         display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack image-links and biography vertically */
         justify-content: center; /* Center content vertically */
         align-items: center; /* Center content horizontally */
         padding: 0 1rem; /* Reduce padding for mobile */
-        margin-top: 10rem; /* Adjust margin for mobile screens */
+        margin-top: 2rem; /* Adjust margin for mobile screens */
         margin-bottom: 5rem; /* Adjust bottom margin for mobile */
     }
 
